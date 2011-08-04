@@ -11,8 +11,15 @@ class Build
 
       class << self
         def exclude?(attributes)
-          (attributes.key?(:branch) && attributes[:branch].match(/gh[-_]pages/i)) ||
-          (attributes[:message] && attributes[:message].downcase.match(/\[ci ([\w ]*)\]/) && $1 == 'skip')
+          github_pages?(attributes) || skip_command?(attributes)
+        end
+
+        def github_pages?(attributes)
+          attributes[:branch] && attributes[:branch].match(/gh[-_]pages/i)
+        end
+
+        def skip_command?(attributes)
+          attributes[:message] && attributes[:message].downcase.match(/\[ci ([\w ]*)\]/) && $1 == 'skip'
         end
       end
 
