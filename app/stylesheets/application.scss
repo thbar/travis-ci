@@ -13,7 +13,6 @@ audio:not([controls]) { display: none; }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 blockquote { margin: 1em 40px; }
 dfn { font-style: italic; }
@@ -58,7 +57,7 @@ td { vertical-align: top; }
  * Application Styles
  */
 
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background: url(/images/layout/bg-tile.gif); }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { margin: 0; font-size: 13px; line-height: 1.231; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -95,11 +94,9 @@ caption {
   height: 40px;
   width: 100%;
   top: 0px;
-  z-index: 11;
   font-size: 13px;
   line-height: 40px;
   @include background-image(linear-gradient(#444, #111));
-  @include single-box-shadow(rgba(black, 0.5));
 }
 #left {
   position: absolute;
@@ -108,10 +105,9 @@ caption {
   padding-bottom: 9999px;
   margin-bottom: -9999px;
   background: #fff;
-  @include single-box-shadow(rgba(black, 0.2));
+  @include single-box-shadow(rgba(black, 0.5));
 }
 #main {
-  z-index: 30;
   display: block;
   padding: 60px 290px 30px 440px;
   @include transition(padding .5s ease-out);
@@ -187,7 +183,6 @@ caption {
   }
   .profile ul {
     display: none;
-    z-index: 70;
     position: absolute;
     top: 40px;
     right: 160px;
@@ -280,7 +275,7 @@ caption {
       height: 23px;
       z-index: -1;
       @include rotate(45deg);
-      @include single-box-shadow(rgba(black, 0.2));
+      @include single-box-shadow(rgba(black, 0.5));
     }
     li:nth-child(odd) .indicator {
       background:#fff;
@@ -325,7 +320,6 @@ caption {
   h3 {
     margin: 15px 0 0 0;
     font-size: 24px;
-    @include text-shadow(rgba(white, 1) 1px 1px 0);
   }
   a {
     color: #666;
@@ -335,8 +329,6 @@ caption {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 60;
-    @include text-shadow(rgba(white, 1) 1px 1px 0);
     a {
       height: 16px;
       display: block;
@@ -345,7 +337,7 @@ caption {
       text-decoration: none;
       margin-left: 10px;
       padding-left: 20px;
-      background: no-repeat 0px 0px;
+      background: no-repeat 0px -1px;
       color: #999;
       &.watchers {
         background-image: url(/images/icons/github-watchers.png);
@@ -374,7 +366,6 @@ caption {
     background: url(/images/icons/github-admin.png) no-repeat right 1px;
     text-indent: -999px;
     overflow: hidden;
-    z-index: 60;
     &:hover {
       width: 100px;
       text-indent: 0;
@@ -609,7 +600,6 @@ caption {
 /* right */
 
 #right {
-  z-index: 10;
   padding-bottom: 9999px;
   margin-bottom: -9999px;
 
@@ -720,7 +710,6 @@ caption {
     background-color: #f2f4f9;
 
     &.toggled {
-      z-index: 50;
       .icon {
         border-color: $slider-border-normal $slider-border-light $slider-border-normal $slider-border-normal;
         border-width: 5px 5px 5px 0;
@@ -927,19 +916,6 @@ pre::-webkit-scrollbar-thumb:horizontal {
   }
 }
 
-#github_ribbon {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  display: block;
-  width: 149px;
-  height: 150px;
-  background: url(/images/github-ribbon.png) no-repeat;
-  text-indent: -999px;
-  overflow: hidden;
-  z-index: 20;
-}
-
 .clearfix:after {
   clear: both;
   content: ".";
@@ -1031,4 +1007,25 @@ ul#tokens {
 
 .clear {
   clear: both;
+}
+
+#github {
+  right: -65px;
+  height: 30px;
+  top: 40px;
+  position: absolute;
+  text-decoration: none;
+  width: 250px;
+  @include rotate(45deg);
+  span {
+    background: orange;
+    color: white;
+    font-size: 14px;
+    left: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    @include box-shadow(rgba(black, 0.2) 1px 1px 10px, rgba(black, 0.07) 0 0 3px 1px inset);
+  }
 }
