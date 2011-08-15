@@ -1,4 +1,4 @@
-<table id="matrix">
+<table id="matrix" class="builds">
   <caption>Build Matrix</caption>
   <thead>
     <tr>

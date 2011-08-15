@@ -1,5 +1,5 @@
 <tr class="build {{color}}">
-  <td><a href="#!/{{repository/slug}}/builds/{{id}}">{{number}}</a></td>
+  <td class="number"><a href="#!/{{repository/slug}}/builds/{{id}}">{{number}}</a></td>
   {{#each config_table}}
     <td>{{value}}</td>
   {{/each}}

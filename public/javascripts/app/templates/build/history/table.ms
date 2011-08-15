@@ -1,4 +1,4 @@
-<table id="builds">
+<table id="builds" class="builds">
   <thead>
     <tr>
       <th>Build</th>

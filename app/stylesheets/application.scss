@@ -293,16 +293,14 @@ caption {
 
 #left #repositories li,
 #main .summary .number a,
-#main #matrix td:first-child a,
-#main #builds .build td:first-child a {
+#main .builds td.number a {
   background-image: url(/images/icons/status.yellow.png);
   padding-left: 20px;
   background-repeat: no-repeat;
 }
 #left #repositories li.green,
 #main .summary.green .number a,
-#main #matrix .green td:first-child a,
-#main #builds .build.green td:first-child a {
+#main .builds .build.green td.number a {
   background-image: url(/images/icons/status.green.png);
   color: green;
   padding-left: 20px;
@@ -310,8 +308,7 @@ caption {
 }
 #left #repositories li.red,
 #main .summary.red .number a,
-#main #matrix .red td:first-child a,
-#main #builds .build.red td:first-child a {
+#main .builds .build.red td.number a {
   background-image: url(/images/icons/status.red.png);
   color: #c00;
   padding-left: 20px;
