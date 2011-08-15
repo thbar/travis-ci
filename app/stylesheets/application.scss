@@ -105,6 +105,7 @@ caption {
   padding-bottom: 9999px;
   margin-bottom: -9999px;
   background: #fff;
+  z-index: 90;
   @include single-box-shadow(rgba(black, 0.5));
 }
 #main {
@@ -187,6 +188,7 @@ caption {
     top: 40px;
     right: 160px;
     background-color: #444;
+    z-index: 100;
     @include border-bottom-radius(4px);
     @include box-shadow(2px 2px 10px #888);
   }
@@ -350,6 +352,26 @@ caption {
   .github-stats > * {
     float: left;
   }
+  .github-admin {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 0px;
+    height: 16px;
+    padding-right: 20px;
+    font-size: 11px;
+    text-decoration: none;
+    text-align: right;
+    color: #999;
+    background: url(/images/icons/github-admin.png) no-repeat right 1px;
+    text-indent: -9999px;
+    overflow: hidden;
+    &:hover {
+      display: block;
+      width: 100px;
+    }
+  }
 
   .tabs {
     margin-top: 35px;
@@ -387,6 +409,7 @@ caption {
   }
   .profile {
     margin: 20px 0 30px 60px;
+    z-index:100;
   }
   .profile dt {
     display: block;
@@ -948,6 +971,7 @@ ul#tokens {
         background: url('/images/icons/admin.png') no-repeat 3px 3px;
         text-indent: -9999px;
         overflow: hidden;
+        text-align: left;
       }
       .toggle_enabled {
         float: left;
