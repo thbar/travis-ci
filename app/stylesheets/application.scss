@@ -113,7 +113,8 @@ caption {
   z-index: 11;
   font-size: 13px;
   line-height: 40px;
-  background: url(/images/layout/bg-top.png) repeat-x;
+  @include background-image(linear-gradient(#444, #111));
+  @include single-box-shadow(rgba(black, 0.5));
 }
 #left {
   position: absolute;
