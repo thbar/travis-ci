@@ -350,27 +350,6 @@ caption {
   .github-stats > * {
     float: left;
   }
-  .github-admin {
-    /* display: block; */
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0px;
-    height: 16px;
-    padding-right: 20px;
-    font-size: 11px;
-    text-decoration: none;
-    text-align: right;
-    color: #999;
-    background: url(/images/icons/github-admin.png) no-repeat right 1px;
-    text-indent: -999px;
-    overflow: hidden;
-    &:hover {
-      width: 100px;
-      text-indent: 0;
-    }
-  }
 
   .tabs {
     margin-top: 35px;
@@ -967,7 +946,7 @@ ul#tokens {
         margin-left: 10px;
         font-size: 14px;
         background: url('/images/icons/admin.png') no-repeat 3px 3px;
-        text-indent: -999px;
+        text-indent: -9999px;
         overflow: hidden;
       }
       .toggle_enabled {
