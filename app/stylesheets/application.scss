@@ -85,53 +85,33 @@ caption {
 }
 
 /* layout */
-
-#top {
-  display: block;
-  float: left;
-  clear: both;
-  background-color: black;
-  height: 40px;
-  width: 100%;
-  top: 0px;
-  font-size: 13px;
-  line-height: 40px;
-  @include background-image(linear-gradient(#444, #111));
-}
-#left {
-  position: absolute;
-  top: 40px;
-  width: 400px;
-  padding-bottom: 9999px;
-  margin-bottom: -9999px;
-  background: #fff;
-  z-index: 90;
-  @include single-box-shadow(rgba(black, 0.5));
-}
 #main {
   display: block;
-  padding: 60px 290px 30px 440px;
+  float: left;
+  margin: 15px 30px 0;
   @include transition(padding .5s ease-out);
+
   &.loading {
     opacity: .1;
     min-height: 1000px;
   }
   &.large {
-    padding: 60px 100px 30px 440px;
   }
 }
 
 .slide-left {
-  position: absolute;
-  top:150px;
-  right:0px;
   background-color: #bcd;
 }
 
 /* top */
 
 #top {
+  display: block;
+  height: 40px;
+  line-height: 40px;
   color: #ccc;
+  @include background-image(linear-gradient(#444, #111));
+  @include clearfix;
 
   h1 {
     float: left;
@@ -212,6 +192,11 @@ caption {
 /* left */
 
 #left {
+  width: 400px;
+  background: #fff;
+  float: left;
+  @include single-box-shadow(rgba(black, 0.5));
+
   #search {
     height: 90px;
     padding: 30px 20px 0 20px;
@@ -602,8 +587,11 @@ caption {
 /* right */
 
 #right {
-  padding-bottom: 9999px;
-  margin-bottom: -9999px;
+  display: block;
+  float: right;
+  background-color: #f2f4f9;
+  overflow: visible;
+  @include transition(width .5s ease-out);
 
   h4 {
     margin: 25px 0 0 0;
@@ -684,14 +672,6 @@ caption {
     margin-bottom: 5px;
   }
 
-  position: absolute;
-  right: 0px;
-  display: block;
-  top: 40px;
-  min-height: 100%;
-  background-color: #f2f4f9;
-  overflow: visible;
-  @include transition(width .5s ease-out);
   &.maximized {
     width: 240px;
   };
