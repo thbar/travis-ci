@@ -1,4 +1,4 @@
 <li id="tab_history">
-  <h5><a href="#!/{{slug}}/builds">Build History</a></h5>
+  <a href="#!/{{slug}}/builds">Build History</a>
   <div class="tab"></div>
 </li>
