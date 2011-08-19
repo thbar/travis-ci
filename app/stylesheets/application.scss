@@ -674,13 +674,14 @@ caption {
   }
   #sponsors div {
     margin: 15px -15px -15px -15px;
-    padding: 15px;
+    padding: 15px 15px 10px;
     background-color: #eee;
     @include border-bottom-radius(4px);
   }
   #sponsors img {
     border: 1px solid #bbb;
     width: 168px;
+    margin-bottom: 5px;
   }
 
   position: absolute;
